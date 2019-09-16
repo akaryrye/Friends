@@ -1,0 +1,35 @@
+<h1>Friends</h1>
+
+<h2>Female Friends:</h2>
+<ul>
+  {{#each friends}}
+    {{#unless male}}
+      {{> friends/friend male=true}}
+    {{/unless}}
+  {{/each}}
+</ul>
+
+<h2>Male Friends</h2>
+<ul>
+  {{#each friends}}
+    {{#if male}}
+      {{> friends/friend male=false}}
+    {{/if}}
+  {{/each}}
+</ul>
+
+<h2>Become a Friend</h2>
+<form class="create-form">
+  <div class="form-group">
+    <label for="myName">Name:</label>
+    <input type="text" id="myName" name="Name">
+  </div>
+
+  <div class="form-group">
+    <label for="gender">Gender</label><br>
+    <input type="radio" name="male" value="1" checked> Male<br>
+    <input type="radio" name="female" value="0"> Female
+  </div>
+
+  <button type="submit">Add Me</button>
+</form>
