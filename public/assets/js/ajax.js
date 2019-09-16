@@ -18,11 +18,21 @@ $(function () {
     );
   });
 
+  function formatScore() {
+    let score = "";
+    for (let i = 0; i < 9; i++) {
+      score += $(`#score${i}`).val().trim() + ','
+    }
+    score += $(`#score9`).val().trim();
+    return score;
+  }
+
   $(".create-form").on("submit", function (event) {
     event.preventDefault();
     var newFriend = {
       name: $("#myName").val().trim(),
-      male: $("[name=male]:checked").val().trim()
+      male: $("[name=male]:checked").val().trim(),
+      score: formatScore()
     };
     console.log(newFriend);
     $.ajax("/api/cats", {

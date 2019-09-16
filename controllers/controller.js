@@ -13,7 +13,7 @@ router.get("/", function(req, res) {
 router.post("/api/cats", function(req, res) {
   helpers.create(
     ["name", "male", "scores"],
-    [req.body.name, req.body.male, '1,2,3,4,5,6,7,8,9,0'],
+    [req.body.name, req.body.male, req.body.score],
     function(result) {res.json({id: result.insertId }); }
   );
 });
