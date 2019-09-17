@@ -7,7 +7,7 @@ $(function () {
       male : newGender
     };
 
-    $.ajax("/api/cats/" + id, {
+    $.ajax("/api/friend/" + id, {
       type: "PUT",
       data: newGenderState
     }).then(
@@ -35,7 +35,7 @@ $(function () {
       score: formatScore()
     };
     console.log(newFriend);
-    $.ajax("/api/cats", {
+    $.ajax("/api/friend", {
       type: "POST",
       data: newFriend
     }).then(
@@ -49,7 +49,7 @@ $(function () {
   $(".delete").on("click", function (event) {
     var id = $(this).data("id");
 
-    $.ajax("/api/cats/" + id, {
+    $.ajax("/api/friend/" + id, {
       type: "DELETE"
     }).then(
       function () {

@@ -10,7 +10,11 @@ router.get("/", function(req, res) {
   });
 });
 
-router.post("/api/cats", function(req, res) {
+router.get("/survey", function(req, res) {
+    res.render("survey");
+});
+
+router.post("/api/friend", function(req, res) {
   helpers.create(
     ["name", "male", "scores"],
     [req.body.name, req.body.male, req.body.score],
@@ -18,7 +22,7 @@ router.post("/api/cats", function(req, res) {
   );
 });
 
-router.put("/api/cats/:id", function(req, res) {
+router.put("/api/friend/:id", function(req, res) {
   var condition = "id = " + req.params.id;
 
   console.log("condition", condition);
@@ -35,7 +39,7 @@ router.put("/api/cats/:id", function(req, res) {
   });
 });
 
-router.delete("/api/cats/:id", function(req, res) {
+router.delete("/api/friend/:id", function(req, res) {
   var condition = "id = " + req.params.id;
 
   helpers.delete(condition, function(result) {

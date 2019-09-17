@@ -1,0 +1,80 @@
+<div class="mdl-grid site-max-width">
+  <div class="mdl-cell mdl-cell--12-col mdl-card mdl-shadow--4dp welcome-card portfolio-card">
+    <div class="mdl-card__title">
+      <h2 class="mdl-card__title-text">Welcome to Friend Finder</h2>
+    </div>
+    <div class="mdl-card__supporting-text">
+      If you've been looking for the love of your life, a new best friend, or a new way to justify your
+      delusions of grandeur, you have come to the right place!
+    </div>
+    <div class="mdl-card__actions mdl-card--border">
+      <h2>Become a Friend</h2>
+      <form class="create-form">
+        <div class="form-group">
+          <label for="myName">Name:</label>
+          <input type="text" id="myName" name="Name">
+        </div>
+
+        <div class="form-group">
+          <label for="gender">Gender</label><br>
+          <input type="radio" name="male" value="1" checked> Male<br>
+          <input type="radio" name="female" value="0"> Female
+        </div>
+
+        <div class="form-group">
+          <div>
+            <label for="score0">Question 1</label><br>
+            <input type="range" id="score0" name="question0" min="0" max="9" value="5" oninput="disp0.value = score0.value"/>
+            <output id="disp0">5</output>
+          </div>
+          <div>
+            <label for="score1">Question 2</label><br>
+            <input type="range" id="score1" name="question1" min="0" max="9" value="5" oninput="disp1.value = score1.value"/>
+            <output id="disp1">5</output>
+          </div>
+          <div>
+            <label for="score2">Question 3</label><br>
+            <input type="range" id="score2" name="question2" min="0" max="9" value="5" oninput="disp2.value = score2.value"/>
+            <output id="disp2">5</output>
+          </div>
+          <div>
+            <label for="score3">Question 4</label><br>
+            <input type="range" id="score3" name="question3" min="0" max="9" value="5" oninput="disp3.value = score3.value"/>
+            <output id="disp3">5</output>
+          </div>    
+          <div>
+            <label for="score4">Question 5</label><br>
+            <input type="range" id="score4" name="question4" min="0" max="9" value="5" oninput="disp4.value = score4.value"/>
+            <output id="disp4">5</output>
+          </div>
+          <div>
+            <label for="score5">Question 6</label><br>
+            <input type="range" id="score5" name="question5" min="0" max="9" value="5" oninput="disp5.value = score5.value"/>
+            <output id="disp5">5</output>
+          </div>    
+          <div>
+            <label for="score6">Question 7</label><br>
+            <input type="range" id="score6" name="question6" min="0" max="9" value="5" oninput="disp6.value = score6.value"/>
+            <output id="disp6">5</output>
+          </div>
+          <div>
+            <label for="score7">Question 8</label><br>
+            <input type="range" id="score7" name="question7" min="0" max="9" value="5" oninput="disp7.value = score7.value"/>
+            <output id="disp7">5</output>
+          </div>
+              <div>
+            <label for="score8">Question 9</label><br>
+            <input type="range" id="score8" name="question8" min="0" max="9" value="5" oninput="disp8.value = score8.value"/>
+            <output id="disp8">5</output>
+          </div>
+          <div>
+            <label for="score9*">Question 10</label><br>
+            <input type="range" id="score9" name="question9" min="0" max="9" value="5" oninput="disp9.value = score9.value"/>
+            <output id="disp9">5</output>
+          </div>
+        </div>
+        <button type="submit">Add Me</button>
+      </form>
+    </div>
+  </div>
+</div>
