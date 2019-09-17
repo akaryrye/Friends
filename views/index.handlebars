@@ -4,7 +4,7 @@
 <ul>
   {{#each friends}}
     {{#unless male}}
-      {{> friends/friend male=true}}
+      {{> friend male=true}}
     {{/unless}}
   {{/each}}
 </ul>
@@ -13,7 +13,7 @@
 <ul>
   {{#each friends}}
     {{#if male}}
-      {{> friends/friend male=false}}
+      {{> friend male=false}}
     {{/if}}
   {{/each}}
 </ul>
